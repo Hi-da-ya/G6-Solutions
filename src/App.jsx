@@ -1,12 +1,17 @@
 import React from 'react';
-import Index from './Components/Index';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <Index />
-    </div>
+    <Router>
+      <Routes>
+       
+        
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
