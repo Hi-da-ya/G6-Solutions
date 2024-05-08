@@ -85,5 +85,52 @@
 .service-description{
     color: rgba(255, 4, 0, 0.99);
 }
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.us {
+   
+    color:rgb(12, 185, 171)
+}
+
+
+.journey{
+    background-color: rgba(6, 27, 119, 0.979);
+}
+
+.journey:hover {
+    background-color: rgba(188, 192, 228, 0.945);
+}
+.header{
+    font-family: "Playfair Display", serif;
+    
+    color: rgba(8, 4, 4, 0.99);
+    text-align: center;
+    
+
+}
+.point{
+background-image: url("https://img.freepik.com/free-photo/futurism-perspective-digital-nomads-lifestyle_23-2151252444.jpg?t=st=1715085406~exp=1715089006~hmac=c51314bb670c4bb32cfb69d0cb888f9c5a66eda70ac89d626ec5e579c163c38a&w=1380");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 500px;
+width: 100%;
+object-fit: cover;
+
+}
+
+
 
 
