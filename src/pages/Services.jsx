@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
@@ -32,17 +31,17 @@ function Services() {
     {
       name: "UI/UX Design",
       description: "Craft intuitive and visually appealing user interfaces for your applications.",
-      imageUrl: "https://img.freepik.com/free-photo/3d-character-emerging-from-smartphone_23-2151336694.jpg?t=st=1715145342~exp=1715148942~hmac=d369bce00fff2a53667918bf3b6ea7d214f4bba8940aba3ced6cb40784dd4c9f&w=1380",
+      imageUrl: "https://img.freepik.com/free-photo/3d-character-emerging-from-smartphone_23-2151336694.jpg?t=st=1715205560~exp=1715209160~hmac=394d7ac071747179e2b663d4f49c5743eeb501b22532d9bbc9d85af01350bd00&w=1380",
     },
     {
       name: "Backend Development",
       description:"Develop robust and scalable server-side solutions to power your applications.",
-      imageUrl: "https://img.freepik.com/free-photo/programming-background-collage_23-2149901771.jpg?t=st=1715145018~exp=1715148618~hmac=d07fe5664af992e2567a51e4d85963ee5db2d2f384ba81d647e0b8f34ffa120a&w=1060",
+      imageUrl: "https://img.freepik.com/free-photo/programming-background-collage_23-2149901771.jpg?t=st=1715205641~exp=1715209241~hmac=e77854b3aedc45f8c9dd2f85832b267b59a337f90158118c55468a0603b76e6c&w=1060",
     },
     {
       name: "Cloud Solutions",
       description: "Deploy and manage scalable cloud infrastructure for your applications.",
-      imageUrl: "https://img.freepik.com/free-photo/saas-concept-collage_23-2149399281.jpg?t=st=1715145110~exp=1715148710~hmac=fdfcfebe052879e38aae3ef1f4b7de5481df999188d13a0c534f17e158e63ffa&w=1380",
+      imageUrl: "https://img.freepik.com/free-photo/saas-concept-collage_23-2149399281.jpg?t=st=1715205703~exp=1715209303~hmac=e2ec7cf3e1db6a10b8a0b49879f32c2792eb02de096bf16c098d9792620bb5b2&w=1380",
     },
     {
       name: "Quality Assurance",
@@ -74,7 +73,9 @@ function Services() {
 
   return (
 
+    
     <div className="services-container">
+    <Header/>
 
 
       <div className='header-div'>
@@ -104,7 +105,9 @@ function Services() {
         </div>
       ))}
     </div>
+    <Footer/>
     </div>
+   
   );
 }
 
