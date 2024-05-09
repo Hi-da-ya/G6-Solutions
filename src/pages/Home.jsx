@@ -100,7 +100,7 @@ const Home = () => {
                
                     <img src="https://img.freepik.com/premium-photo/abstract-computer-coding-digital-technology-concept-with-blue-binary-code-streaming-across-cybernetic-background_674594-55421.jpg?w=1380" alt="Tech Background" className="absolute top-0 left-0 w-full h-full object-cover opacity-30" />
                     <div className="relative z-10">
-                        <h1 className="text-5xl font-bold">Bringings Your Digital Dreams to Reality</h1>
+                        <h1 className="text-5xl font-bold">Bringing Your Digital Dreams to Reality</h1>
                         <p className="text-xl mt-4">Cutting-edge web and app development tailored to your business needs.</p>
                         <button className="mt-8 bg-white text-blue-500 hover:bg-gray-100 font-bold py-2 px-8 rounded-full">
                             Discover Our Projects
