@@ -3,3 +3,10 @@
 @tailwind utilities;
 
 
+.slick-slide {
+    padding: 0 10px; /* Adds padding around each slide */
+}
+
+.slick-list {
+    margin: 0 20px; /* Adds horizontal margin to the slider container */
+}
