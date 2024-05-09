@@ -5,7 +5,7 @@ import Services from './pages/Services';
 import ContactUs from './pages/ContactUs';
 import Projects from './pages/Projects';
 import AboutUs from './pages/AboutUs';
-
+import QuizPage from './pages/QuizPage';
 const App = () => {
   return (
     <Router>
@@ -15,6 +15,7 @@ const App = () => {
       <Route path="/contact" element = {<ContactUs/>}/>
       <Route path='/projects' element = {<Projects/>}/>
       <Route path='/about' element = {<AboutUs/>}/>
+      <Route path="/quiz" element={<QuizPage />} />
       </Routes>
     </Router>
   );

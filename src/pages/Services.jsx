@@ -74,42 +74,40 @@ function Services() {
   return (
 
     
-    <div className="services-container">
-    <Header/>
-
-
-      <div className='header-div'>
-      <h1 className="service-header">Our Services</h1>
-      </div>
-     
-
-
-
-
-      <input
-        type="text"
-        placeholder="Search services..."
-        value={searchQuery}
-        onChange={handleSearchChange}
-        className="search-input"
-      />
-
-    <div className='service-item-container'>
-      {filteredServices.map((service, index) => (
-      
-        <div key={index} className="service-item">
-          <img src={service.imageUrl} alt={service.name} className="service-icon" />
-          <h3 className="service-name">{service.name}</h3>
-          <p className="service-description">{service.description}</p>
-          <button className="get-started-button" onClick={() => handleClick(service)}>Get Started</button>
+    <div className="flex flex-col min-h-screen">
+    <Header />
+    <main className="flex-grow mt-16 mb-16 px-4 md:px-6"> {/* Adjust padding/margin as needed */}
+      <div className="max-w-7xl mx-auto py-6">
+        <h1 className="text-4xl font-bold text-center mb-6">Our Services</h1>
+        <input
+          type="text"
+          placeholder="Search services..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+          className="block w-full py-2 px-4 leading-tight text-gray-700 bg-white border border-gray-200 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {filteredServices.map((service, index) => (
+            <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+              <img src={service.imageUrl} alt={service.name} className="w-full h-48 object-cover" />
+              <div className="px-6 py-4">
+                <h3 className="text-xl font-semibold">{service.name}</h3>
+                <p className="text-gray-700 text-base">{service.description}</p>
+                <button
+                  onClick={() => handleClick(service)}
+                  className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-    <Footer/>
-    </div>
-   
-  );
+      </div>
+    </main>
+    <Footer />
+  </div>
+);
 }
-
 export default Services;
 

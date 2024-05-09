@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.quiz-image {
+  max-width: 80%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners */
+  display: block; /* To center the image */
+  margin: 20px auto; /* Center the image horizontally and add some vertical spacing */
+}
+
+
 .service-header{
     text-align: center;
 

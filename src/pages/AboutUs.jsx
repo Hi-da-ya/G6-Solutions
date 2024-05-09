@@ -25,56 +25,47 @@ const AboutUs = () => {
     ];
 
     return (
-        <div className='container'>
-          <Header/>
-            <div className='cloud'>
-               
-            
-            <div className='header'>
-                <h1 className='about-jere-header'>THE G 6 </h1>
-                <p className='us'>Welcome to G6 Solutions, your premier software engineering partner based in Nairobi, Kenya. Founded by a team of passionate and experienced professionals, G6 Solutions brings together a diverse range of expertise to deliver innovative solutions tailored to meet your unique needs.
+        <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow mt-16 mb-16 px-6">
+            <div className="max-w-7xl mx-auto py-6">
+                <h1 className="text-4xl font-bold text-center mb-6">About G6 Solutions</h1>
+                <img 
+                        src="https://img.freepik.com/free-photo/futuristic-business-scene-with-ultra-modern-ambiance_23-2151003773.jpg?t=st=1715223585~exp=1715227185~hmac=9353d7165faf1c5a1464cef5dabdaf0930a4cf0bcdb371e085d2054b0fff70d4&w=1060" // Add your desired image URL here
+                        alt="About Us"
+                        className="w-full h-auto object-cover rounded-lg shadow-md mb-6"
+                    />
+                <p className="text-lg text-gray-600">
+                Welcome to G6 Solutions, your go-to software engineering partner in Nairobi, Kenya. Founded by a skilled team with a passion for technology, we specialize in creating innovative, tailored solutions to meet your unique needs. Our founders—Hidaya, Griffins Mbae, Japheth Karani, Jeremiah Maina, and Ian Kinyua—bring decades of expertise in software engineering and project management.
 
-                    At the heart of G6 Solutions is a commitment to excellence and collaboration. Our founders, Hidaya, Griffins Mbae, Japheth Karani, Jeremiah Maina, and Ian Kinyua, collectively bring decades of experience in software engineering, project management, and technology leadership. With a shared vision for driving positive change through technology, our team is dedicated to delivering cutting-edge solutions that empower businesses and organizations to thrive in today's digital landscape.
+At G6 Solutions, we are committed to excellence, innovation, and customer satisfaction. We excel at translating business objectives into scalable, reliable, and user-centric software solutions, whether you’re a startup needing an MVP, an enterprise looking to modernize, or embarking on a digital transformation.
 
-                    What sets G6 Solutions apart is our relentless focus on quality, innovation, and customer satisfaction. We take pride in our ability to understand your business objectives and translate them into scalable, reliable, and user-centric software solutions. Whether you're a startup looking to build a Minimum Viable Product (MVP), an enterprise seeking to modernize your systems, or an organization embarking on a digital transformation journey, G6 Solutions is here to guide you every step of the way.
+We offer a broad range of services, including custom software and mobile app development, web development, and cloud services, all designed to help your business thrive in the digital age. Thank you for choosing G6 Solutions as your trusted technology partner. We are excited to help you succeed with cutting-edge solutions.</p>
+           
+                
+                <div className="mt-8">
+                    {values.map((value, index) => (
+                        <button key={index} onClick={() => handleClick(value)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full my-2">
+                            {value.name}
+                        </button>
+                    ))}
+                    <p className="text-gray-700 mt-4">{selectedValue}</p>
+                </div>
 
-                    From custom software development and mobile app development to web development, cloud services, and beyond, G6 Solutions offers a comprehensive suite of services designed to address your evolving technology needs. Our collaborative approach, combined with our technical expertise and industry insights, ensures that we deliver results that exceed your expectations, time and time again.
-
-                    Thank you for considering G6 Solutions as your trusted technology partner. We look forward to embarking on this journey with you and helping you achieve your goals through the power of software innovation.</p>
+                <h2 className="text-3xl font-bold mt-12">Our Team</h2>
+                <div className="flex flex-wrap justify-center gap-4 mt-4">
+                    {teamMembers.map((member, index) => (
+                        <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg p-4 text-center">
+                            <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto" />
+                            <h3 className="text-lg font-bold mt-2">{member.name}</h3>
+                            <p className="text-gray-600">{member.role}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-            </div>
-
-            <h2 className='about-jere'>About G6 Solutions</h2>
-            <div className='button-div-jere'>
-                {values.map((value, index) => (
-                    <button key={index} onClick={() => handleClick(value)} className='button-jere'>
-                        {value.name} <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path d="M12 16.172l-4.243-4.243 1.415-1.415 2.828 2.828 2.828-2.828 1.415 1.415z" /></svg>
-                    </button>
-                ))}
-                <p className='us'>{selectedValue}</p>
-            </div>
-
-            <h2 className='about-jere'>Our Journey</h2>
-            <p className='journey'>
-                Learning to code will probably take more time than you expect. Getting stuck drains time. And you will get stuck.
-                Trying to get unstuck is frustrating. But the moment you spot the issue, correct the code, and run the code
-                successfully, the feeling of achievement is amazing!
-            </p>
-
-            <h2 className='about-jere'>Our Team</h2>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                {teamMembers.map((member, index) => (
-                    <div key={index} className='name'>
-                            <img src={member.image} alt={member.name}  style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%' }} />
-
-                        <p>{member.role}</p>
-                        <p>{member.name}</p>
-                    </div>
-                ))}
-            </div>
-            <Footer/>
-        </div>
-    );
+        </main>
+        <Footer />
+    </div>
+);
 };
-
 export default AboutUs;

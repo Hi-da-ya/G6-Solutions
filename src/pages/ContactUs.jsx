@@ -11,17 +11,17 @@ function ContactUs() {
     message: '',
   });
 
-function handleChange(event){
-  setFormData({
-    ...formData,
-    [event.target.id]: event.target.value,
-  });
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value, // Changed from id to name for better practice
+    });
+  }
 
-}
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
   
-    fetch("http://localhost:3000/contacts", {
+    fetch("https://json-server-p2.onrender.com/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,6 @@ function handleChange(event){
     })
       .then((res) => res.json())
       .then((data) => {
-  
         console.log(formData);
         Swal.fire({
           title: 'Success!',
@@ -39,69 +38,76 @@ function handleChange(event){
         });
       })
       .catch((error) => {
-        // Handle errors (e.g., display an error alert)
         console.error('Error submitting form:', error);
       });
+  }
 
-  };
   return (
-    <div>
-        <Header />
-        <div class = "containers">
-        <form id="contact"  onSubmit={handleSubmit}>
-            <h3>Contact Form</h3>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow mt-16 mb-16 px-6">
+        <div className="max-w-4xl mx-auto py-6">
+          <form id="contact" onSubmit={handleSubmit} className="space-y-4">
+            <h3 className="text-2xl font-semibold">Contact Form</h3>
             <h4>Contact us for a custom service</h4>
-            <label htmlFor="name">Name:</label>
+
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name:</label>
             <input
-            type="text"
-            id="name"
-            name = "name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Your Name"
-            required
-            autoFocus
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              required
+              autoFocus
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
 
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
             <input
-            type="email"
-            id="email"
-            name = "email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Your Email"
-            required
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
 
-            <label htmlFor="phone">Phone:</label>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone:</label>
             <input
-            type="tel"
-            id="phone"
-            name = "phone"
-            value={formData.phone}
-            onChange={handleChange}
-            pattern="[0-9]{2}-[0-9]{8}"
-            placeholder="07-12345678"
-            required
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              pattern="[0-9]{2}-[0-9]{8}"
+              placeholder="07-12345678"
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
 
-            <label htmlFor="message">Message:</label>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message:</label>
             <textarea
-            id="message"
-            name = "message"	
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Your Message"
-            required
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your Message"
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-            <button type="submit">Submit</button>
-        </form>
+            <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Submit
+            </button>
+          </form>
         </div>
-        <Footer />
+      </main>
+      <Footer />
     </div>
   );
 }
-
 
 export default ContactUs;
