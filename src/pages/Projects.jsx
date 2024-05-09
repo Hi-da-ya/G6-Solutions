@@ -1,13 +1,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
 
 export default function Projects() {
-
-    const cardContents =[
+    const cardContents = [
         {imgSrc: "https://img.freepik.com/free-photo/metal-shopping-cart-filled-with-groceries-night-generated-by-ai_188544-53746.jpg?t=st=1715094277~exp=1715097877~hmac=45989d871d7b14a860906b7770a5a20fba66086233f52eabe3f97f3c613c86a2&w=1380",
         imgAlt: "e-commerce store",
         title: "Sasa Nguo Clothing Store",
@@ -41,65 +37,41 @@ export default function Projects() {
             description:"Cinema Max is more than just a movie app; it's a vibrant community of film enthusiasts like yourself. Connect with fellow cinephiles, share reviews, and join discussions about your favorite films and directors.With convenient features like offline viewing, watchlists, and synchronized viewing across devices, Cinema Max ensures that the magic of cinema is always within reach, whenever and wherever you are.",
           },
     ]
-
-          const settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          }
     
-  return (
-    <>
-    <div className="app">
-    <Header />
-    <h2 className="text-3xl font-bold text-center">Projects</h2>
-        <Slider {...settings}>
-        {
-            cardContents.map((card,index) => (
-                <ProjectCard key={index}
-                imgAlt={card.imgAlt}
-                imgSrc={card.imgSrc}
-                title={card.title}
-                description={card.description}
-                />
-            ))
-        }
-        </Slider>
-        <Footer />
-    </div>
-    </>
-  )
+
+   
+    return (
+        <>
+            <Header />
+            <main className="mt-20 mb-20"> {/* Margin top and bottom adjustments */}
+                <div className="container mx-auto px-6 py-10">
+                    <h1 className="text-4xl font-bold text-center mb-6">Our Projects</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {cardContents.map((card, index) => (
+                            <ProjectCard
+                                key={index}
+                                imgSrc={card.imgSrc}
+                                imgAlt={card.imgAlt}
+                                title={card.title}
+                                description={card.description}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </main>
+            <Footer />
+        </>
+    );
 }
 
-function ProjectCard({
-    imgSrc,
-    imgAlt,
-    title,
-    description,
-}) {
-  return (
-    <div>
-          
-         <section id="projects" className="py-10">
-<div className="container mx-auto px-6" id='slider-container'>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-{Array.from({ length: 1 }, (_, index) => (
-            <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg">
-              <img className="w-full" src={imgSrc} alt={imgAlt} />
-<div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{title} {index + 1}</div>
-                <p className="text-gray-700 text-base">
-                  Details about Project {index + 1}. {description}
-                </p>
-              </div>
+function ProjectCard({ imgSrc, imgAlt, title, description }) {
+    return (
+        <div className="max-w-sm mx-auto mb-6 rounded overflow-hidden shadow-lg">
+            <img className="w-full" src={imgSrc} alt={imgAlt} />
+            <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{title}</div>
+                <p className="text-gray-700 text-base">{description}</p>
             </div>
-))}
-        </div>
-      </div>
-    </section>
-           
         </div>
     );
-};
+}

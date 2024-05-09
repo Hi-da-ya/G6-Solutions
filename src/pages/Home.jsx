@@ -91,12 +91,13 @@ const Home = () => {
       navigate('/about');
   };
     return (
-        <div className="min-h-screen flex flex-col">
-            <Header />
-
-            <main>
+      <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow mt-16 mb-16"> {/* Adjust these margins based on your header and footer height */}
+         
                 {/* Hero Section */}
                 <div className="bg-blue-500 text-white text-center py-20 relative">
+               
                     <img src="https://img.freepik.com/premium-photo/abstract-computer-coding-digital-technology-concept-with-blue-binary-code-streaming-across-cybernetic-background_674594-55421.jpg?w=1380" alt="Tech Background" className="absolute top-0 left-0 w-full h-full object-cover opacity-30" />
                     <div className="relative z-10">
                         <h1 className="text-5xl font-bold">Bringing Your Digital Dreams to Reality</h1>
