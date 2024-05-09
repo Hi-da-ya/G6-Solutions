@@ -2,11 +2,362 @@
 @tailwind components;
 @tailwind utilities;
 
+.service-header{
+    text-align: center;
 
-.slick-slide {
-    padding: 0 10px; /* Adds padding around each slide */
+}
+.header-div{
+    background: linear-gradient(to right, rgb(0, 255, 221), rgb(255, 64, 64));
+    padding: 20px;
+    margin-bottom: 10px; 
 }
 
-.slick-list {
-    margin: 0 20px; /* Adds horizontal margin to the slider container */
+.search-input {
+    border: 2px solid linear-gradient(to right, rgb(0, 255, 221), rgb(255, 64, 64));
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 250px; 
+    color: #333;
+    margin: 30px 500px;
 }
+
+.search-input:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(255, 4, 0, 0.99);
+}
+
+.search-input {
+    transition: border-color 0.3s ease;
+    border: 2px solid black;
+}
+
+
+
+.service-item-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.service-item{
+    padding: 10px 40px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 8px rgba(4, 4, 4, 0.5);
+}
+
+
+.service-icon{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(4, 4, 4, 0.99);
+    transition: ease-in-out 0.5s;
+
+}
+
+.service-icon:hover{
+    width: 350px;
+    height: 350px;
+    box-shadow: 10px 10px 5px rgba(255, 4, 0, 0.99);
+}
+
+.get-started-button{
+    background-color: rgb(0, 255, 221);
+    padding: 10px 20px;
+    border: none;
+    transition: ease-in-out 0.5s;
+    font-size: 0.8em;
+}
+
+.get-started-button:hover{
+    background-color: rgba(255, 4, 0, 0.99);
+}
+
+.service-name{
+    font-weight: 900;
+}
+
+.service-description{
+    color: rgba(255, 4, 0, 0.99);
+}
+.button-jere{
+    background-color: #007bff;
+    color: rgb(211, 9, 9);
+    padding: 10px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    flex-direction: row;
+    margin: 0 20px;
+}
+
+.button-jere:hover {
+    transform: scale(1.1);
+}
+
+
+.about-jere{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px 0;
+    font-weight: 700;
+}
+
+.us {
+   
+    color:white
+}
+
+
+.journey{
+    background-color: rgba(208, 216, 248, 0.979);
+}
+
+.journey:hover {
+    background-color: rgba(188, 192, 228, 0.945);
+}
+.header{
+    font-family: "Playfair Display", serif;
+    
+    color: rgba(8, 4, 4, 0.99);
+    text-align: center;
+    
+
+}
+
+.cloud{
+background-image: url("https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?t=st=1715218827~exp=1715222427~hmac=43cf62a6d44772fbade2c971287861072a336b0f0ad8dbd4a99efc3512e768b2&w=900");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+width: 100%;
+object-fit: cover;
+
+
+
+}
+.cloud::before{
+    z-index: -1;
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Black color with 50% opacity */;
+}
+
+
+
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    justify-content: space-between;
+    padding-right: 20px;
+
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.about-jere-header{
+    text-align: center;
+    font-size: 1.6em;
+    color: white;
+}
+
+
+.journey {
+    background-color: rgba(248, 245, 213, 0.979);
+}
+
+.journey:hover {
+    background-color: rgba(188, 192, 228, 0.945);
+}
+
+.header {
+    font-family: "Playfair Display", serif;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-member {
+    background-color: antiquewhite;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.name {
+    background-color: antiquewhite;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+
+/* Japheth */
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  } */
+  
+  /* body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    background: #5239c3;
+  } */
+  
+  .containers {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact input[type="tel"],
+  #contact input[type="url"],
+  #contact textarea,
+  #contact button[type="submit"] {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  }
+  
+  #contact {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  
+  #contact h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+  #contact h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+  }
+   
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact input[type="tel"],
+  #contact input[type="url"],
+  #contact textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+  }
+  
+  #contact input[type="text"]:hover,
+  #contact input[type="email"]:hover,
+  #contact input[type="email"]:hover,
+  #contact input[type="tel"]:hover,
+  #contact input[type="url"]:hover,
+  #contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+  }
+  
+  #contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+  }
+  
+  #contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #0dd6c9;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  #contact button[type="submit"]:hover {
+    background: #43A047;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .copyright {
+    text-align: center;
+  }
+  
+  #contact input:focus,
+  #contact textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #888;
+  }
+  
+  :-moz-placeholder {
+    color: #888;
+  }
+  
+  ::-moz-placeholder {
+    color: #888;
+  }
+  
+  :-ms-input-placeholder {
+    color: #888;
+  }
+  
+
+
+  #slider-container{
+    margin: 40px 500px;
+  }
+  
