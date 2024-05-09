@@ -21,7 +21,7 @@ function ContactUs() {
   function handleSubmit(e) {
     e.preventDefault();
   
-    fetch("http://localhost:3000/contacts", {
+    fetch("https://json-server-p2.onrender.com/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
